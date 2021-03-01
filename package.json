@@ -1,0 +1,14 @@
+{
+  "name": "kijanaio1.0",
+  "version": "1.0.0",
+  "description": "Landing Page for Kijana.io",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "node-sass sass/main.scss -w css/style.css"
+  },
+  "author": "Kijana R.",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
