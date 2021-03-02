@@ -1,0 +1,50 @@
+@mixin clearfix 
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@mixin marBotSm 
+{
+    margin-bottom: 2rem;   
+}
+
+@mixin absoluteCenter 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin projectTitlePos
+{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin projectBlurbPos
+{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin titleFont 
+{
+    font-size: 4.5rem;
+    font-weight: 600;    
+}
+
+@mixin spanFont 
+{
+    font-size: 1.5rem;
+    display: block;
+    font-weight: 200;
+    text-transform: capitalize;
+    font-style: italic;    
+}
