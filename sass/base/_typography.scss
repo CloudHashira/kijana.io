@@ -1,0 +1,62 @@
+.navigation {
+    
+    .nav {
+        list-style: none;
+        font-size: 2rem;
+        font-weight: 300;
+
+        &_item {
+            &--link {
+                text-decoration: none;
+                color: $main-white;
+                &:hover {
+                    color: $main-grey;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .social {
+        list-style: none;
+        font-size: 2.5rem;
+        &_item {
+            &--link {
+                color: $main-white;
+                &:hover {
+                    color: $main-grey;
+                }
+            }
+        }
+    }
+}
+
+.header {
+    text-align: center;
+    font-weight: 300;
+    color: $main-blue;
+
+    &_title {        
+        font-size: 5rem;
+        font-weight: 300;
+    }
+
+    &_correction {
+        font-size: 2rem;
+        font-weight: 200;
+    }
+
+    &_text {
+        font-size: 2.5rem;
+    }
+}
+
+.footer {
+    text-align: right;
+    color: $main-white;
+    
+    &_info {        
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+}

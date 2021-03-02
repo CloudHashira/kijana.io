@@ -1,0 +1,29 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mukta', sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    font-weight: 400; //200 300 400 500 600
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom, 
+    rgba(#031226, .95), rgba(#031226, .95),
+    rgba(#0a1833, .95), rgba(#0a1833, .95),
+    rgba(#0c1445, .95), rgba(#0c1445, .95), 
+    rgba(#38285c, .95), rgba(#4c408e, .95), 
+    rgba(#5c54a4, .95));
+
+    
+    background-size: cover;
+    background-position: center;
+}

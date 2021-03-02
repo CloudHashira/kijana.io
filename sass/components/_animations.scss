@@ -1,0 +1,25 @@
+@keyframes starfall
+{
+    0%
+    {
+        transform: translateY(0rem);
+    }
+
+    100%
+    {
+        transform: translateY(-200rem);
+    }
+}
+
+@keyframes cloudMove
+{
+    0% 
+    {
+        transform: translateX(0);
+    }
+
+    100%
+    {
+        transform: translate(7rem, .75rem);       
+    }
+}

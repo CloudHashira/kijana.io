@@ -1,0 +1,78 @@
+// section
+// {
+//     height: 100vh;
+//     position: relative;
+// }
+
+#stars
+{
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $small-shadows;
+    animation: starfall 45s linear infinite;
+    border-radius: 50%;
+    //Get it? Starfall
+
+    &::after
+    {
+        content: "";
+
+        position: absolute;
+        top: 200rem;
+
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+        background: transparent;    
+        box-shadow: $small-shadows;
+    }
+}
+
+#stars2
+{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: transparent;    
+    box-shadow: $medium-shadows;
+    animation: starfall 90s linear infinite;
+
+    &::after
+    {
+        content: "";
+
+        position: absolute;
+        top: 200rem;
+
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background: transparent;    
+        box-shadow: $medium-shadows;
+    }
+}
+
+#stars3
+{
+    width: 3px;
+    height: 3px;
+    background: transparent; 
+    box-shadow: $large-shadows; 
+    border-radius: 50%;
+    animation: starfall 130s linear infinite;
+    
+    &::after
+    {
+        content: "";
+
+        position: absolute;
+        top: 200rem;
+
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: transparent;    
+        box-shadow: $large-shadows;
+    }
+}
