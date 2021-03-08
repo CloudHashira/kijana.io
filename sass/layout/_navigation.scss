@@ -1,16 +1,32 @@
 .navigation {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0rem;
+    position: relative;
     background: $main-black;
     display: flex;
     justify-content: space-around;
     padding: 1rem;
     z-index: 100;
 
+    @include respond(tablet) {
+        position: relative;
+    }
+
+
+
     &_logo {
         height: 8rem;
         margin: .5rem;
+
+        @include respond(tablet) {
+            height: 6rem;
+
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+        }
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &_links {
@@ -19,6 +35,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include respond(tablet) {
+            position: absolute;
+            width: 50rem;
+            height: 0;
+            padding-top: 2rem;
+        }
+
+        @include respond(phone) {
+            width: 40rem;
+        }
     }
 
 
@@ -29,6 +56,10 @@
 
     &_link {
         padding: 1rem;
+
+        @include respond(tablet) {
+            display: none;
+        }
     }
 
     &_social {

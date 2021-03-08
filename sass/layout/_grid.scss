@@ -5,24 +5,42 @@ section, header
 }
 .about 
 {
-    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
+    margin-bottom: 20rem;
 
-    border-radius: 5rem;
+    @include respond(tablet) {
+        display: block;
+    }
 
     &_photo {
+
         &--image {
             border-radius: 50%;
+            width: 35rem;
+
+            @include respond(tablet) {
+                width: 30rem;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 
     &_text {
         border-radius: 2rem;
-        width: 90%;
+        width: 95%;
         padding: 3rem;
+        margin: 0 auto;
+
+        @include respond(tablet) {
+            width: 90%;
+            padding: 2rem;
+            text-align: center;
+        }
     }
 }
 
@@ -30,11 +48,16 @@ section, header
 
 .projects {
 
-    margin-bottom: 15rem;
+    margin-bottom: 20rem;
     &_container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+
+        @include respond(tabletLandscape) {
+            width: 90%;
+            margin: 0 auto;
+        }
     }
 
     &_header {
@@ -42,12 +65,15 @@ section, header
     }
 
     &_project {
-        margin: 2rem;
+        margin: 3rem;
         display: inline-block;
         border-radius: 2rem;
         
         position: relative;
 
+        @include respond(tablet) {
+            margin: 4rem;
+        }
 
         &--link {
             border-radius: 2rem;
@@ -70,7 +96,7 @@ section, header
 }
 
 .nosleep {
-    margin-bottom: 15rem;
+    margin-bottom: 20rem;
     &_header {
         margin-bottom: 3rem;
     }
@@ -79,6 +105,8 @@ section, header
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
     }
 
     &_reason {
@@ -87,18 +115,22 @@ section, header
             margin: 1rem 2rem;
             border-radius: 1rem;
             height: 35rem;
+            box-shadow: .5rem .5rem .5rem rgba(0,0,0, 0.6);
+
+            @include respond(tablet) {
+                height: 30rem;
+            }
         }
     }
 
-    &_author {
-
-    }
-
-    &_info {
-
-    }
 }
 
 .contactme {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
+    
+    @include respond(tabletLandscape) {
+        padding: 0 2rem;
+        margin: 0 auto;
+        width: 90%;
+    }
 }
