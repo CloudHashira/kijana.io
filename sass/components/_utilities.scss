@@ -1,11 +1,6 @@
-// section
-// {
-//     height: 100vh;
-//     position: relative;
-// }
-
 #stars
 {
+    display: none;
     width: 1px;
     height: 1px;
     background: transparent;
@@ -13,11 +8,12 @@
     animation: starfall 45s linear infinite;
     border-radius: 50%;
     //Get it? Starfall
+    @include respond(bigScreen) { display: block;}
 
     &::after
     {
         content: "";
-
+        display: none;
         position: absolute;
         top: 200rem;
 
@@ -26,22 +22,25 @@
         border-radius: 50%;
         background: transparent;    
         box-shadow: $small-shadows;
+        @include respond(bigScreen) { display: block;}
     }
 }
 
 #stars2
 {
+    display: none;
     width: 2px;
     height: 2px;
     border-radius: 50%;
     background: transparent;    
     box-shadow: $medium-shadows;
     animation: starfall 90s linear infinite;
+    @include respond(bigScreen) { display: block;}
 
     &::after
     {
         content: "";
-
+        display: none;
         position: absolute;
         top: 200rem;
 
@@ -50,22 +49,25 @@
         border-radius: 50%;
         background: transparent;    
         box-shadow: $medium-shadows;
+        @include respond(bigScreen) { display: block;}
     }
 }
 
 #stars3
 {
+    display: none;
     width: 3px;
     height: 3px;
     background: transparent; 
     box-shadow: $large-shadows; 
     border-radius: 50%;
     animation: starfall 130s linear infinite;
-    
+    @include respond(bigScreen) { display: block;}
+
     &::after
     {
         content: "";
-
+        display: none;
         position: absolute;
         top: 200rem;
 
@@ -74,5 +76,6 @@
         border-radius: 50%;
         background: transparent;    
         box-shadow: $large-shadows;
+        @include respond(bigScreen) { display: block;}
     }
 }
