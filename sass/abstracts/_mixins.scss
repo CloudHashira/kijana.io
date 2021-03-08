@@ -26,20 +26,25 @@
     transform: translate(-50%, -50%);
 }
 
-@mixin projectBlurbPos
-{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@mixin hoverTransition {
+    transition: all .15s ease-in;
 }
 
 @mixin titleFont 
 {
-    font-size: 4.5rem;
-    font-weight: 600;    
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 3.5rem;
+    margin-bottom: .5rem;
+    color: $main-white; 
 }
 
+@mixin headerFont {
+    font-size: 3rem;
+    font-weight: 300;
+    color: $main-teal;
+    text-align: center;
+}
 @mixin spanFont 
 {
     font-size: 1.5rem;
@@ -47,4 +52,55 @@
     font-weight: 200;
     text-transform: capitalize;
     font-style: italic;    
+}
+
+//MEDIA QUERIES
+
+/*
+0-600px         Phone
+600-900px       Tablet
+900-1200px      Tablet Landscape
+1200-1800px     Normal
+
+1800px +        Big Screen
+*/
+
+
+//One way of doing it but would need to impliment all in sections but it works
+// @mixin respond-phone {  
+//     @media (max-width: 600px) {@content;}
+// }
+
+//Better way with the use of breakpoint arguements
+/*
+-phone
+-tablet
+-tablet landscape
+-big screen
+
+Dont use px because of default user settings
+USE EMS for media
+1em = 16px
+
+Intended Pixals / 16px = ems needed for query
+
+Order: Base, Typography, layout, grid, components
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content;} //600
+    }
+
+    @if $breakpoint == tablet {
+        @media (max-width: 56.25em) {@content;} //900
+    }
+
+    @if $breakpoint == tabletLandscape {
+        @media (max-width: 75em) {@content;} //1200
+    }
+
+    @if $breakpoint == bigScreen {
+        @media (min-width: 112.5em) {@content;} //1800
+    }
 }
