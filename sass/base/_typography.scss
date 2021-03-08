@@ -1,32 +1,35 @@
 .navigation {
-    
-    .nav {
+
+    &_links {
         list-style: none;
         font-size: 2rem;
-        font-weight: 300;
-
-        &_item {
-            &--link {
-                text-decoration: none;
-                color: $main-white;
-                &:hover {
-                    color: $main-grey;
-                    text-decoration: underline;
-                }
-            }
-        }
+        font-weight: 400;
     }
 
-    .social {
-        list-style: none;
-        font-size: 2.5rem;
-        &_item {
-            &--link {
-                color: $main-white;
-                &:hover {
-                    color: $main-grey;
-                }
-            }
+    &_link, &_social {
+        color: $main-white;
+    }
+
+    &_link {
+        @include hoverTransition;
+        text-decoration: none;
+
+        &:hover {
+            color: $main-blue;
+            text-decoration: underline;
+        }
+    }
+    
+    &_social {
+        @include hoverTransition;
+        font-size: 3rem;
+    
+        @include respond(tablet) {
+            font-size: 3.5rem;
+        }
+
+        &:hover {
+            color: $main-red;
         }
     }
 }
@@ -34,29 +37,162 @@
 .header {
     text-align: center;
     font-weight: 300;
-    color: $main-blue;
+    color: $main-teal;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.2;
 
-    &_title {        
-        font-size: 5rem;
+    &_welcome { 
+        font-size: 7rem;
         font-weight: 300;
+
+        @include respond(phone) {
+            font-weight: 400;
+            font-size: 5rem;
+            margin-bottom: .5rem;
+        }
     }
 
     &_correction {
-        font-size: 2rem;
+        font-style: italic;
+        font-size: 2.5rem;
         font-weight: 200;
+        margin-bottom: 1.25rem;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+    }
+
+    &_fed {
+        font-size: 3rem;
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.about 
+{
+    &_header {
+        @include titleFont;
     }
 
     &_text {
-        font-size: 2.5rem;
+        font-size: 2em;
+        line-height: 1.8;
+        color: $main-white;
+
+        @include respond(tablet) {
+            font-size: 2rem;
+        }
+
+        &--header {
+            text-align: center;
+            margin: 3rem;
+        }
+
+        &--2 {
+            margin-top: 2rem;
+            @include respond(tablet) {
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+.projects {
+
+    &_header {
+        @include titleFont;
+    }
+
+    &_project {
+        font-size: 1.75rem;
+        color: $main-white;
+        text-align: center;
+
+        &--link{
+            @include hoverTransition;
+            color: $main-white;
+            text-decoration: none;
+
+            &:hover {
+                color: $main-red;
+                text-decoration: underline;
+            }
+            &-img{
+                border-radius: 2rem 2rem 0 0;
+                height: 30rem;
+            }
+            
+        }
+    }
+    
+}
+
+.nosleep {
+    color: $main-white;
+    text-align: center;
+    
+    &_header {
+        @include titleFont;
+    }
+
+    &_container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    &_reason {
+        
+        &--image {
+            margin: 1rem 2rem;
+            border-radius: 1rem;
+            height: 35rem;
+        }
+
+        &--author {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+    
+        &--info {
+            font-size: 1.75rem;
+            font-weight: 500;
+            font-style: italic;
+        }
+    }
+
+}
+
+.contactme {
+    color: $main-white;
+    text-align: center;
+    font-size: 2rem;
+
+    &_link {
+        @include hoverTransition;
+        color: $main-blue;
+        text-decoration: none;
+
+        &:hover {
+            color: $main-red;
+            text-decoration: underline;
+        }
     }
 }
 
 .footer {
-    text-align: right;
-    color: $main-white;
-    
-    &_info {        
-        font-weight: 300;
-        font-size: 1.5rem;
+
+    &_anti {
+        color: $main-white;
+
+        &--text {        
+            font-weight: 300;
+            font-size: 1.5rem;
+        }
     }
+
 }

@@ -5,25 +5,67 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; //10px 10px / 16px = 62.5
     scroll-behavior: smooth;
-    box-sizing: border-box;
+
+
+    //Largest first because smallest will be apllied because it is last
+    @include respond(bigScreen) {
+        font-size: 75%; //12px
+    }
+
+    @include respond(tabletLandscape) {
+        font-size: 56.25%; //9px
+    }
+
+    @include respond(phone) {
+        font-size: 50%; // 8px
+    }
+
+    //If mobile would be opposite order
+
+    //Not needed because the same
+    // @include respond(tablet) {
+    //     font-size: 50%; //8px
+    // }
 }
 
 body {
     font-family: 'Mukta', sans-serif;
+    box-sizing: border-box;
     letter-spacing: 1.5px;
     line-height: 1.5;
     font-weight: 400; //200 300 400 500 600
     overflow-x: hidden;
-    background-image: linear-gradient(to bottom, 
-    rgba(#031226, .95), rgba(#031226, .95),
-    rgba(#0a1833, .95), rgba(#0a1833, .95),
-    rgba(#0c1445, .95), rgba(#0c1445, .95), 
-    rgba(#38285c, .95), rgba(#4c408e, .95), 
-    rgba(#5c54a4, .95));
+    background-color: $main-black;
 
+    @include respond(bigScreen) {
+
+        
+        background-image: linear-gradient(to bottom, 
+        rgba(#031226, .95), rgba(#031226, .95),
+        rgba(#0a1833, .95), rgba(#0a1833, .95),
+        rgba(#0c1445, .95), rgba(#0c1445, .95), 
+        rgba(#38285c, .95), rgba(#4c408e, .95), 
+        rgba(#5c54a4, .95));
+    }
+}
+
+.container {
+    position: relative;
+    padding: 2rem;
+    background-color: $main-black;
+
+    @include respond(bigScreen) {
+        width: 120em;
+        top: -.25rem;
+        margin: 0 auto;
+        border-radius: 1rem;
+        box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, 0.3), 0 .75rem 2rem 0 rgba(0, 0, 0, 0.3);
+    }
     
-    background-size: cover;
-    background-position: center;
+    @include respond(tablet) {
+        padding: 0;
+    }
+
 }
