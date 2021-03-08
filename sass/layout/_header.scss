@@ -1,0 +1,16 @@
+.header {
+    height: 100vh;
+    position: relative;
+
+    &_container {
+        display: inline-block;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include respond(phone) {
+            top: 45%;
+        }
+    }
+}
